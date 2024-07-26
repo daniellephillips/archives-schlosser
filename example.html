@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css">
+  <title>Silent Currents</title>
+</head>
+<body>
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="#">
+      <img src="silentcurrent-sm.png" width="30" height="30" class="d-inline-block align-top" alt="">
+      Silent Currents
+    </a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="map.html">Map Designations<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="downloads.html">Downloads<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About<span class="sr-only"></span></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Content of the page goes here -->
+
+  <script>
+    // Get the current URL path
+    const currentPath = window.location.pathname.split('/').pop();
+
+    // Get all nav-link elements
+    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+
+    // Loop through each nav-link element
+    navLinks.forEach(link => {
+      // Get the href attribute of the nav-link
+      const linkPath = link.getAttribute('href');
+
+      // If the href matches the current path, add the active class to its parent li element
+      if (linkPath === currentPath) {
+        link.parentElement.classList.add('active');
+      }
+    });
+  </script>
+</body>
+</html>
