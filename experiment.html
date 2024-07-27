@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Downloads</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="starter-template.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            margin: 20px;
+        }
+        .content {
+            padding-top: 70px; /* Adjust this value if necessary */
+        }
+        h1 {
+            text-align: left;
+            margin-bottom: 10px;
+        }
+        .navbar-nav .nav-item .nav-link.active {
+            color: #fff; /* White text color for active link */
+            background-color: #343a40; /* Background color for active link */
+        }
+    </style>
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="index.html">
+        <img src="silentcurrent-sm.png" width="30" height="30" class="d-inline-block align-top" alt="">
+        Silent Currents
+    </a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="about.html">About<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="downloads.html">Downloads<span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="map.html">Map Designations<span class="sr-only"></span></a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container content">
+    <h1>Downloads</h1>
+</div>
+
+<main role="main" class="container content">
+    <p>Download Articles <a href="https://daniellephillips.github.io/archives/Archived-Articles-SharonSchlossser.pdf" target="_blank">Download PDF of Newspaper Articles from 1992 - 2006</a>.</p>
+</main><!-- /.container -->
+
+<!-- Bootstrap core JavaScript -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js" integrity="sha384-pzjw8f+ua7Kw1TIqXShF25UefbL4p4Qo5OmFvb3MGqf5yOiKZxUJKeAvF5IVIHyj" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgNZxzQLA8+GvE7PElKx8kv8zzLrQ2J4zg8zFzCgZC12hC4Fm9L" crossorigin="anonymous"></script>
+
+<script>
+    // Get the current URL path
+    const currentPath = window.location.pathname.split('/').pop();
+
+    // Get all nav-link elements
+    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+
+    // Loop through each nav-link element
+    navLinks.forEach(link => {
+        // Get the href attribute of the nav-link
+        const linkPath = link.getAttribute('href');
+
+        // If the href matches the current path, add the active class to the link element
+        if (linkPath === currentPath) {
+            link.classList.add('active');
+        }
+    });
+</script>
+
+</body>
+</html>
