@@ -73,24 +73,6 @@
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js" integrity="sha384-pzjw8f+ua7Kw1TIqXShF25UefbL4p4Qo5OmFvb3MGqf5yOiKZxUJKeAvF5IVIHyj" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgNZxzQLA8+GvE7PElKx8kv8zzLrQ2J4zg8zFzCgZC12hC4Fm9L" crossorigin="anonymous"></script>
 
-<script>
-    // Get the current URL path
-    const currentPath = window.location.pathname.split('/').pop();
-
-    // Get all nav-link elements
-    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
-
-    // Loop through each nav-link element
-    navLinks.forEach(link => {
-        // Get the href attribute of the nav-link
-        const linkPath = link.getAttribute('href');
-
-        // If the href matches the current path, add the active class to the link element
-        if (linkPath === currentPath) {
-            link.classList.add('active');
-        }
-    });
-</script>
 
 </body>
 </html>
